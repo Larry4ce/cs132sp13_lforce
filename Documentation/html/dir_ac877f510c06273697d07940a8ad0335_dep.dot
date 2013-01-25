@@ -1,0 +1,10 @@
+digraph "cs132_program_0_lforce" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ac877f510c06273697d07940a8ad0335 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_ac877f510c06273697d07940a8ad0335.html"];
+    dir_ac877f510c06273697d07940a8ad0335 [shape=plaintext label="cs132_program_0_lforce"];
+    dir_837c2e71bb50fd8984eb91b79d692c3b [shape=box label="cs132_program_0_lforce" color="black" fillcolor="white" style="filled" URL="dir_837c2e71bb50fd8984eb91b79d692c3b.html"];
+  }
+}
