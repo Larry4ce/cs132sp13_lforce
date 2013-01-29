@@ -14,6 +14,16 @@ int main(void)
 {
     
     @autoreleasepool {
+        NSMutableArray* words = nil ;
+        
+        addobject @" , "
+        
+        addobject @" hello "
+        
+        addobject @" world "
+        
+        
+        
     
     
     }
