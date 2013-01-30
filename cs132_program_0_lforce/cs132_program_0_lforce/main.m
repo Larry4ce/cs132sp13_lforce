@@ -14,18 +14,36 @@ int main(void)
 {
     
     @autoreleasepool {
+        
         NSMutableArray* words = nil ;
         
-        addobject @" , "
         
-        addobject @" hello "
+        NSLog(@" array uninitialized  %@  ", words) ;
         
-        addobject @" world "
+        words = [[NSMutableArray alloc] init];
+        
+        NSLog(@" initialized array  %@  ", words) ;
+        
+        [words addObject : (@" , ")] ;
+        
+        NSLog(@" adding ,   %@  ", words) ;
+        
+        [words addObject :( @" hello ")] ;
+        
+        NSLog(@" adding hello  %@  ", words) ;
         
         
+        [words addObject : (@" world ")] ;
+        
+        NSLog(@" adding world  %@  ", words);
+        
+        [words sortUsingSelector: @selector(localizedCaseInsensitiveCompare:)];
         
     
+        NSLog(@" sorting ,   %@  " , words) ;
     
+        
+        
     }
     return EXIT_SUCCESS;
 }
