@@ -24,16 +24,16 @@ int main(void)
         
         NSLog(@" initialized array  %@  ", words) ;
         
-        [words addObject : (@" , ")] ;
+        [words addObject : (@", ")] ;
         
         NSLog(@" adding ,   %@  ", words) ;
         
-        [words addObject :( @" hello ")] ;
+        [words addObject :( @"hello")] ;
         
         NSLog(@" adding hello  %@  ", words) ;
         
         
-        [words addObject : (@" world ")] ;
+        [words addObject : (@"world")] ;
         
         NSLog(@" adding world  %@  ", words);
         
@@ -43,6 +43,22 @@ int main(void)
         NSLog(@" sorting ,   %@  " , words) ;
     
         
+        
+        NSMutableString* word = nil;
+        
+        NSLog(@"Word unintialized is... %@" , word) ;
+        
+        word = [[ NSMutableString alloc ] initWithString:[words objectAtIndex:0]];
+ 
+        NSLog(@"initialized is... %@ " , word) ;
+        
+        [ word appendString:[words objectAtIndex:2]];
+        
+        NSLog(@"added second object from the array...  %@ " , word) ;
+        
+        [ word insertString:[words objectAtIndex:1] atIndex:0];
+        
+         NSLog(@"added a third object from the array...  %@ " , word) ;
         
     }
     return EXIT_SUCCESS;
