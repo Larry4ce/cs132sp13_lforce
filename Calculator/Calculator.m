@@ -24,10 +24,12 @@
 }
 
 
--(void) pressKey:(char)someUnnamedArgument
+-(void) pressKey:(char)keyPressed
 {
-NSLog(@"STUB response to '%@' message received by object at %p (%@)", NSStringFromSelector(_cmd), self, self);
-return;
+ 
+    
+    numberOnScreen = [self numberOnScreen]*10+(keyPressed - '0') ;
+    return;
 }
 
 @end

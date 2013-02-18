@@ -8,7 +8,7 @@
 
 @property (assign) char operatingPending;
 
--(void) pressKey: (char) someUnnamedArgument ;
+-(void) pressKey: (char) keyPressed ;
 
 
 @end
