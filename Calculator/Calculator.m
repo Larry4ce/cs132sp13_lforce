@@ -26,9 +26,34 @@
 
 -(void) pressKey:(char)keyPressed
 {
- 
+    int value = keyPressed-'0' ;
     
-    numberOnScreen = [self numberOnScreen]*10+(keyPressed - '0') ;
+    
+    if(value <= 9 && value >= 0)
+    {
+        numberOnScreen = [self numberOnScreen]*10+value ;
+    }
+    
+    else
+        {
+            switch (keyPressed)
+            {
+                case 99:
+                    numberOnScreen = 0;
+                    break;
+        
+                case 67:
+                    numberOnScreen = 0;
+                    break;
+            
+                default:
+            
+                    NSLog(@"Uncovered argument '%c' in %@ message received by object at %p (%@)", theKey, NSStringFromSelector(_cmd), self, self);
+                    break;
+            }
+        }
+    
+        
     return;
 }
 
