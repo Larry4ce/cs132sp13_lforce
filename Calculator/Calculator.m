@@ -8,6 +8,10 @@
 
 @synthesize operatingPending;
 
+
+
+BOOL isADigit(char someChar) ;
+
 - (id)init
 {
     self = [super init];
@@ -24,19 +28,19 @@
 }
 
 
--(void) pressKey:(char)keyPressed
+-(void) pressKey:(char)theKey
 {
-    int value = keyPressed-'0' ;
+
     
     
-    if(value <= 9 && value >= 0)
+    if(isADigit(theKey) == YES)
     {
-        numberOnScreen = [self numberOnScreen]*10+value ;
+        numberOnScreen = [self numberOnScreen]*10+(theKey-'0') ;
     }
     
     else
         {
-            switch (keyPressed)
+            switch (theKey)
             {
                 case 99:
                     numberOnScreen = 0;
@@ -51,10 +55,32 @@
                     NSLog(@"Uncovered argument '%c' in %@ message received by object at %p (%@)", theKey, NSStringFromSelector(_cmd), self, self);
                     break;
             }
+            
+            
+
+        
         }
     
-        
+
+    
+    
     return;
+
+
 }
+
+BOOL isADigit(char someChar)
+{
+    int value = someChar-'0' ;
+    if(value <= 9 && value >= 0)
+    {
+        return YES;
+    }
+    else
+        return NO;
+}
+
+
+
 
 @end
