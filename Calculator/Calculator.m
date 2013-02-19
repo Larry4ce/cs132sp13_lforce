@@ -12,6 +12,8 @@
 
 BOOL isADigit(char someChar) ;
 
+BOOL isClearScreenKey(char someChar) ;
+
 - (id)init
 {
     self = [super init];
@@ -39,30 +41,15 @@ BOOL isADigit(char someChar) ;
     }
     
     else
+        if(isClearScreenKey(theKey))
         {
-            switch (theKey)
-            {
-                case 99:
-                    numberOnScreen = 0;
-                    break;
-        
-                case 67:
-                    numberOnScreen = 0;
-                    break;
-            
-                default:
-            
-                    NSLog(@"Uncovered argument '%c' in %@ message received by object at %p (%@)", theKey, NSStringFromSelector(_cmd), self, self);
-                    break;
-            }
-            
-            
-
-        
+            numberOnScreen = 0 ;
         }
     
-
-    
+    else
+    {
+                NSLog(@"Uncovered argument '%c' in %@ message received by object at %p (%@)", theKey, NSStringFromSelector(_cmd), self, self);
+    }
     
     return;
 
@@ -81,6 +68,22 @@ BOOL isADigit(char someChar)
 }
 
 
+BOOL isClearScreenKey(char someChar)
+{
+    switch (someChar)
+    {
+        case 99:
+            return YES;
+            break;
+            
+        case 67:
+            return YES;
+            break;
+            
+        default:
+            return NO ;
+    }
+}
 
 
 @end
