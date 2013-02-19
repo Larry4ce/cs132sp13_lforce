@@ -14,6 +14,13 @@ BOOL isADigit(char someChar) ;
 
 BOOL isClearScreenKey(char someChar) ;
 
+-(void)clearScreen
+{
+    numberOnScreen = 0 ;
+    numberAccumulated = 0 ;
+    operatingPending = NULL ;
+}
+
 - (id)init
 {
     self = [super init];
@@ -43,7 +50,7 @@ BOOL isClearScreenKey(char someChar) ;
     else
         if(isClearScreenKey(theKey))
         {
-            numberOnScreen = 0 ;
+            [self clearScreen] ;
         }
     
     else
