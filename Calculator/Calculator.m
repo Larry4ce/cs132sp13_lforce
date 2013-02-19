@@ -2,11 +2,12 @@
 
 @implementation Calculator
 
-@synthesize numberOnScreen;
+@synthesize numberOnScreen = _DNU_numberOnScreen ;
 
-@synthesize numberAccumulated;
+@synthesize numberAccumulated = _DNU_numberAccumulated ;
 
-@synthesize operatingPending;
+@synthesize operatingPending = _DNU_operatingPending ;
+
 
 
 
@@ -14,21 +15,26 @@ BOOL isADigit(char someChar) ;
 
 BOOL isClearScreenKey(char someChar) ;
 
--(void)clearScreen
-{
-    numberOnScreen = 0 ;
-    numberAccumulated = 0 ;
-    operatingPending = NULL ;
-}
+
 
 - (id)init
 {
     self = [super init];
     if (self)
     {
-        //Set up initial calculator conditions here
+
+    _DNU_:numberOnScreen = 0;
+    _DNU_:numberAccumulated = 0;
+    _DNU_:operatingPending = '+';
     }
     return self;
+}
+
+-(void)clearScreen
+{
+    numberOnScreen = 0 ;
+    numberAccumulated = 0 ;
+    operatingPending = 0 ;
 }
 
 -(NSString*) description
