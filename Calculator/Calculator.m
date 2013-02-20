@@ -23,9 +23,9 @@ BOOL isClearScreenKey(char someChar) ;
     if (self)
     {
 
-    _DNU_:numberOnScreen = 0;
-    _DNU_:numberAccumulated = 0;
-    _DNU_:operatingPending = '+';
+    _DNU_numberOnScreen = 0;
+    _DNU_numberAccumulated = 0;
+    _DNU_operatingPending = '+';
     }
     return self;
 }
@@ -33,8 +33,6 @@ BOOL isClearScreenKey(char someChar) ;
 -(void)clearScreen
 {
     numberOnScreen = 0 ;
-    numberAccumulated = 0 ;
-    operatingPending = 0 ;
 }
 
 -(NSString*) description
