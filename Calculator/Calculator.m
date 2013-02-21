@@ -2,11 +2,11 @@
 
 @implementation Calculator
 
-@synthesize numberOnScreen = _DNU_numberOnScreen ;
+@synthesize numberOnScreen;
 
-@synthesize numberAccumulated = _DNU_numberAccumulated ;
+@synthesize numberAccumulated;
 
-@synthesize operatingPending = _DNU_operatingPending ;
+@synthesize operatingPending;
 
 
 
@@ -21,9 +21,10 @@
     if (self)
     {
 
-    _DNU_numberOnScreen = 0;
-    _DNU_numberAccumulated = 0;
-    _DNU_operatingPending = '+';
+    [self clearScreen];
+    [self clearOperation];
+    [self clearOperation];
+
     }
     return self;
 }
@@ -129,8 +130,8 @@
     
     
     [self setNumberOnScreen : result] ;
-    [self setNumberAccumulated: 0] ;
-    [self setOperatingPending:'?'] ;
+    [self clearOperation] ;
+    [self clearOperation] ;
 }
 
 
@@ -202,24 +203,24 @@ BOOL isArithmeticAllKey(char someChar)
 {
     switch (someChar)
     {
-        case 47:
+        case '+':
             return YES;
             break;
             
-        case 45:
+        case '-':
             return YES;
             break;
             
-        case 43:
+        case '/':
             return YES;
             break;
             
             
-        case 37:
+        case '*':
             return YES;
             break;
             
-        case 42:
+        case '%':
             return YES;
             break;
             
