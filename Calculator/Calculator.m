@@ -136,3 +136,36 @@ BOOL isResultKey(char someChar)
             return NO ;
     }
 }
+
+BOOL isArithmeticAllKey(char someChar)
+{
+    switch (someChar)
+    {
+        case 47:
+            return YES;
+            break;
+            
+        case 45:
+            return YES;
+            break;
+            
+        case 43:
+            return YES;
+            break;
+            
+        case 65:
+            return YES;
+            break;
+            
+        case 37:
+            return YES;
+            break;
+            
+        case 42:
+            return YES;
+            break;
+            
+        default:
+            return NO ;
+    }
+}

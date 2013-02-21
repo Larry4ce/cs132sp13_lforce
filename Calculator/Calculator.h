@@ -25,4 +25,6 @@ BOOL isClearScreenKey(char someChar) ;
 
 BOOL isClearAllKey(char someChar) ;
 
-BOOL isResultKey(char someChar) ; 
+BOOL isResultKey(char someChar) ;
+
+BOOL isArithmeticAllKey(char someChar) ;
