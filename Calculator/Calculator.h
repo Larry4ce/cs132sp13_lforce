@@ -16,6 +16,7 @@
 
 -(void) registerArithmetic:(char)theOperator ;
 
+-(void) computeAndDisplayResult ;
 
 
 @end
@@ -29,3 +30,4 @@ BOOL isClearAllKey(char someChar) ;
 BOOL isResultKey(char someChar) ;
 
 BOOL isArithmeticAllKey(char someChar) ;
+

@@ -80,6 +80,50 @@
 }
 
 
+
+-(void) computeAndDisplayResult
+{
+    
+    int LHS = [self numberAccumulated] ;
+    int RHS = [self numberOnScreen] ;
+    char operation = [self operatingPending] ;
+    int result = RHS ;
+    
+    switch (operation)
+    {
+        case '+':
+            result = LHS + RHS;
+            break;
+            
+        case '-':
+            result = LHS - RHS;
+            break;
+            
+        case '*':
+            result = LHS * RHS;
+            break;
+            
+        case '/':
+            result = LHS / RHS;
+            break;
+            
+        case '%':
+            result = LHS % RHS;
+            break;
+            
+            
+        default:
+            break;
+            
+    }
+    
+    
+    [self setNumberOnScreen : result] ;
+    [self setNumberAccumulated: 0] ;
+    [self setOperatingPending:'?'] ;
+}
+
+
 @end
 
 
@@ -160,9 +204,6 @@ BOOL isArithmeticAllKey(char someChar)
             return YES;
             break;
             
-        case 65:
-            return YES;
-            break;
             
         case 37:
             return YES;
@@ -176,3 +217,4 @@ BOOL isArithmeticAllKey(char someChar)
             return NO ;
     }
 }
+
