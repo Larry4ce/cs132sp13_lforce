@@ -14,6 +14,7 @@
 
 -(void) appendDigit: (char) theDigit ;
 
+-(void) registerArithmetic:(char)theOperator ;
 
 
 

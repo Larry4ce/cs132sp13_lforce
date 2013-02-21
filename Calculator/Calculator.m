@@ -72,6 +72,13 @@
 }
 
 
+-(void) registerArithmetic:(char)theOperator
+{
+    [self setNumberAccumulated : [self numberOnScreen]] ;
+    [self clearScreen] ;
+    [self setOperatingPending:theOperator] ;
+}
+
 
 @end
 
