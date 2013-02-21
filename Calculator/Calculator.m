@@ -2,16 +2,6 @@
 
 @implementation Calculator
 
-@synthesize numberOnScreen;
-
-@synthesize numberAccumulated;
-
-@synthesize operatingPending;
-
-
-
-
-
 
 
 
