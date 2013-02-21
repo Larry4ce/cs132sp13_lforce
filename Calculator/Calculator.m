@@ -11,9 +11,7 @@
 
 
 
-BOOL isADigit(char someChar) ;
 
-BOOL isClearScreenKey(char someChar) ;
 
 
 
@@ -32,7 +30,7 @@ BOOL isClearScreenKey(char someChar) ;
 
 -(void)clearScreen
 {
-    numberOnScreen = 0 ;
+    [self setNumberOnScreen:0] ;
 }
 
 -(NSString*) description
@@ -48,7 +46,7 @@ BOOL isClearScreenKey(char someChar) ;
     
     if(isADigit(theKey) == YES)
     {
-        numberOnScreen = [self numberOnScreen]*10+(theKey-'0') ;
+        [self appendDigit:theKey] ;
     }
     
     else
@@ -66,6 +64,17 @@ BOOL isClearScreenKey(char someChar) ;
 
 
 }
+
+
+-(void) appendDigit: (char) theDigit
+{
+            [ self setNumberOnScreen : [self numberOnScreen]*10+(theDigit-'0') ] ;
+}
+
+
+
+@end
+
 
 BOOL isADigit(char someChar)
 {
@@ -95,6 +104,3 @@ BOOL isClearScreenKey(char someChar)
             return NO ;
     }
 }
-
-
-@end

@@ -8,7 +8,17 @@
 
 @property (assign) char operatingPending;
 
+
+
 -(void) pressKey: (char) theKey ;
+
+-(void) appendDigit: (char) theDigit ;
+
+
 
 
 @end
+
+BOOL isADigit(char someChar) ;
+
+BOOL isClearScreenKey(char someChar) ;
