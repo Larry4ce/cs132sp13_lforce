@@ -122,3 +122,17 @@ BOOL isClearAllKey(char someChar)
             return NO ;
     }
 }
+
+BOOL isResultKey(char someChar)
+{
+    switch (someChar)
+    {
+        case 62:
+            return YES;
+            break;
+            
+            
+        default:
+            return NO ;
+    }
+}

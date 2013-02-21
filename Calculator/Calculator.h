@@ -24,3 +24,5 @@ BOOL isADigit(char someChar) ;
 BOOL isClearScreenKey(char someChar) ;
 
 BOOL isClearAllKey(char someChar) ;
+
+BOOL isResultKey(char someChar) ; 
