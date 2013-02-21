@@ -18,6 +18,11 @@
 
 -(void) computeAndDisplayResult ;
 
+-(void)clearScreen ;
+
+-(void)clearAccumulator ;
+
+-(void)clearOperation ;
 
 @end
 

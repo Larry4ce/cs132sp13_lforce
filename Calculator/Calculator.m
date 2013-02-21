@@ -33,6 +33,16 @@
     [self setNumberOnScreen:0] ;
 }
 
+-(void)clearAccumulator
+{
+    [self setNumberAccumulated:0] ;
+}
+
+-(void)clearOperation
+{
+    [self setOperatingPending:'?'] ;
+}
+
 -(NSString*) description
 {
     return [NSString stringWithFormat:@"Calculator with %d on screen.", [self numberOnScreen ]];
