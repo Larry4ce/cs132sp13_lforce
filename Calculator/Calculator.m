@@ -104,3 +104,21 @@ BOOL isClearScreenKey(char someChar)
             return NO ;
     }
 }
+
+
+BOOL isClearAllKey(char someChar)
+{
+    switch (someChar)
+    {
+        case 97:
+            return YES;
+            break;
+            
+        case 65:
+            return YES;
+            break;
+            
+        default:
+            return NO ;
+    }
+}
