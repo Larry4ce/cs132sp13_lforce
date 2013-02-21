@@ -56,10 +56,28 @@
             [self clearScreen] ;
         }
     
-    else
-    {
-                NSLog(@"Uncovered argument '%c' in %@ message received by object at %p (%@)", theKey, NSStringFromSelector(_cmd), self, self);
-    }
+        else
+            if(isArithmeticAllKey(theKey))
+            {
+                [self registerArithmetic:theKey] ;
+            }
+            else
+                if (isClearAllKey(theKey))
+                {
+                    [self clearOperation] ;
+                    [self clearScreen] ;
+                    [self clearOperation] ;
+                }
+                else
+                    if(isResultKey(theKey))
+                    {
+                        [self computeAndDisplayResult];
+                    }
+    
+                    else
+                    {
+                        NSLog(@"Uncovered argument '%c' in %@ message received by object at %p (%@)", theKey, NSStringFromSelector(_cmd), self, self);
+                    }
     
     return;
 
@@ -179,7 +197,7 @@ BOOL isResultKey(char someChar)
 {
     switch (someChar)
     {
-        case 62:
+        case '=':
             return YES;
             break;
             
