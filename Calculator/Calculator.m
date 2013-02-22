@@ -93,6 +93,7 @@
 
 -(void) registerArithmetic:(char)theOperator
 {
+    [self computeAndDisplayResult] ;
     [self setNumberAccumulated : [self numberOnScreen]] ;
     [self clearScreen] ;
     [self setOperatingPending:theOperator] ;
@@ -162,11 +163,11 @@ BOOL isClearScreenKey(char someChar)
 {
     switch (someChar)
     {
-        case 99:
+        case 'c':
             return YES;
             break;
             
-        case 67:
+        case 'C':
             return YES;
             break;
             
@@ -180,11 +181,11 @@ BOOL isClearAllKey(char someChar)
 {
     switch (someChar)
     {
-        case 97:
+        case 'a':
             return YES;
             break;
             
-        case 65:
+        case 'A':
             return YES;
             break;
             
