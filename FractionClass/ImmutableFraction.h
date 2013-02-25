@@ -24,6 +24,17 @@
 
 -(Fraction*)reciprocal
 
+-(Fraction*)sumWith:(Fraction*)
+
+-(Fraction*)subtractFrom:(Fraction*)
+
+-(Fraction*)minus:(Fraction*)
+
+-(Fraction*)multiplyBy:(Fraction*)
+
+-(Fraction*)divideBy:(Fraction*)
+
+-(Fraction*)divideInto:(Fraction*)
 
 
 @end
