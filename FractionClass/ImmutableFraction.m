@@ -12,4 +12,19 @@
 @implementation ImmutableFraction
 
 
+-(id)init
+{
+
+    printf(" Running init method ") ;
+    
+}
+
+-(id)description
+{
+    
+    printf(" Running description method ") ;
+    
+}
+
+
 @end
