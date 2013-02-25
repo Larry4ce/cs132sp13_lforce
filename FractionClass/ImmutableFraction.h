@@ -20,5 +20,10 @@
 
 -(float)floatValue ;
 
+-(Fraction*)negative
+
+-(Fraction*)reciprocal
+
+
 
 @end
