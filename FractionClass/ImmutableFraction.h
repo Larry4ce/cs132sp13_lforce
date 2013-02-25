@@ -20,21 +20,21 @@
 
 -(float)floatValue ;
 
--(Fraction*)negative
+-(Fraction*)negative ;
 
--(Fraction*)reciprocal
+-(Fraction*)reciprocal ;
 
--(Fraction*)sumWith:(Fraction*)
+-(Fraction*)sumWith:(Fraction*) ;
 
--(Fraction*)subtractFrom:(Fraction*)
+-(Fraction*)subtractFrom:(Fraction*) ;
 
--(Fraction*)minus:(Fraction*)
+-(Fraction*)minus:(Fraction*) ;
 
--(Fraction*)multiplyBy:(Fraction*)
+-(Fraction*)multiplyBy:(Fraction*) ;
 
--(Fraction*)divideBy:(Fraction*)
+-(Fraction*)divideBy:(Fraction*) ;
 
--(Fraction*)divideInto:(Fraction*)
+-(Fraction*)divideInto:(Fraction*) ;
 
 
 @end
