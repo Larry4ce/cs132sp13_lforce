@@ -18,4 +18,7 @@
 
 -(void)initWithFraction:(Fraction*) ;
 
+-(float)floatValue ;
+
+
 @end
