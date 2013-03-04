@@ -87,7 +87,8 @@
 
 -(void) appendDigit: (char) theDigit
 {
-            [ self setNumberOnScreen : [self numberOnScreen]*10+(theDigit-'0') ] ;
+    int old =[self numberOnScreen] ;
+            [ self setNumberOnScreen : old*10+(theDigit-'0') ] ;
 }
 
 
