@@ -15,7 +15,7 @@
 -(id)init
 {
 
-    printf(" Running init method ") ;
+    printf(" Running init method\n") ;
     
     return 0;
 }
@@ -23,7 +23,7 @@
 -(id)description
 {
     
-    printf(" Running description method ") ;
+    printf(" Running description method\n") ;
     
     return 0;
 }
@@ -31,7 +31,7 @@
 -(Fraction*)negative 
 {
     
-    printf(" Running negative method ") ;
+    printf(" Running negative method\n") ;
     
     return nil ;
 }
@@ -40,7 +40,7 @@
 -(Fraction*)reciprocal 
 {
     
-    printf(" Running reciprocal method ") ;
+    printf(" Running reciprocal method\n") ;
     
     return nil ;
 }
@@ -49,7 +49,7 @@
 -(Fraction*)sumWith:(Fraction*) 
 {
     
-    printf(" Running sumwith method ") ;
+    printf(" Running sumwith method\n") ;
     
     return nil ;
 }
@@ -57,7 +57,7 @@
 -(Fraction*)subtractFrom:(Fraction*) 
 {
     
-    printf(" Running subtractFrom method ") ;
+    printf(" Running subtractFrom method\n") ;
     
     return nil ;
 }
@@ -65,7 +65,7 @@
 -(Fraction*)minus:(Fraction*) 
 {
     
-    printf(" Running minus method ") ;
+    printf(" Running minus method\n") ;
     
     return nil ;
 }
@@ -73,7 +73,7 @@
 -(Fraction*)multiplyBy:(Fraction*) 
 {
     
-    printf(" Running multiplyBy method ") ;
+    printf(" Running multiplyBy method\n ") ;
     
     return nil ;
 }
@@ -81,7 +81,7 @@
 -(Fraction*)divideBy:(Fraction*) 
 {
     
-    printf(" Running divideBy method ") ;
+    printf(" Running divideBy method\n") ;
     
     return nil ;
 }
@@ -89,10 +89,15 @@
 -(Fraction*)divideInto:(Fraction*)
 {
     
-    printf(" Running divideInto method ") ;
+    printf(" Running divideInto method\n") ;
     
     return nil ;
 }
 
 
 @end
+
+int GCD(int x, int y)
+{
+    printf("GCD function running. \n")
+}
