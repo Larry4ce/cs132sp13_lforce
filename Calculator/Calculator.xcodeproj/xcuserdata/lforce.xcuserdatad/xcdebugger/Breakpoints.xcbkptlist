@@ -85,11 +85,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "Yes"
          filePath = "Calculator.m"
-         timestampString = "384059667.531158"
+         timestampString = "384108103.241499"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "85"
-         endingLineNumber = "85"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
          landmarkName = "-pressKey:"
          landmarkType = "5">
          <Actions>
@@ -105,7 +105,7 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          condition = "old == 0"
-         continueAfterRunningActions = "No"
+         continueAfterRunningActions = "Yes"
          filePath = "Calculator.m"
          timestampString = "384059419.442355"
          startingColumnNumber = "9223372036854775807"
