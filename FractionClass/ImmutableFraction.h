@@ -28,6 +28,8 @@
 
 -(Fraction*)subtractFrom:(Fraction*) ;
 
+-(Fraction*)add:(Fraction*) ;
+
 -(Fraction*)minus:(Fraction*) ;
 
 -(Fraction*)multiplyBy:(Fraction*) ;

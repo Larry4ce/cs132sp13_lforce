@@ -63,6 +63,11 @@
     return nil ;
 }
 
+-(Fraction*)add:(Fraction*) ;
+{
+    
+}
+
 -(Fraction*)subtractFrom:(Fraction*) 
 {
     
@@ -74,9 +79,11 @@
 -(Fraction*)minus:(Fraction*) 
 {
     
-    printf(" Running minus method\n") ;
+
+    Fraction* theAnswer =  (LHS)subtractFrom:(RHS)
     
-    return nil ;
+    return theAnswer;
+
 }
 
 -(Fraction*)multiplyBy:(Fraction*) 
