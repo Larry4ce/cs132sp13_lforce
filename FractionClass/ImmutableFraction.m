@@ -31,7 +31,12 @@
 -(Fraction*)negative 
 {
     
-    printf(" Running negative method\n") ;
+    int a = [self numerator];
+    int b = [self denominator];
+    
+    [self setNumerator : 0-a] ;
+    [self setDenominator : 0-b] ;
+    
     
     return nil ;
 }
