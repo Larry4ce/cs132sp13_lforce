@@ -12,7 +12,7 @@
     {
 
     [self clearScreen];
-    [self clearOperation];
+    [self clearAccumulator];
     [self clearOperation];
 
     }

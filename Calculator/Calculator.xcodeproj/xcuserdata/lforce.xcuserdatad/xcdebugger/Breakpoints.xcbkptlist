@@ -72,5 +72,26 @@
             </BreakpointActionProxy>
          </Actions>
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "Yes"
+         filePath = "Calculator.m"
+         timestampString = "384057706.32559"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
+         landmarkName = "-pressKey:"
+         landmarkType = "5">
+         <Actions>
+            <BreakpointActionProxy
+               ActionType = "Xcode.BreakpointAction.DebuggerCommand">
+               <ActionContent
+                  consoleCommand = "p &quot;\t\t\t%d\t%c\t%d\n&quot; ,[self numberAccumulated] , [self operatingPending] , [self numberOnScreen] ">
+               </ActionContent>
+            </BreakpointActionProxy>
+         </Actions>
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
