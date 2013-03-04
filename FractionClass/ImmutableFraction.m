@@ -33,21 +33,25 @@
     
     int a = [self numerator];
     int b = [self denominator];
-    
-    [self setNumerator : 0-a] ;
-    [self setDenominator : 0-b] ;
-    
-    
-    return nil ;
+    int newNumerator = 0-a ;
+    int newDenominator = 0-b ;
+    Fraction* theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+                                     andDenominator:newDenominator];
+    return theAnswer;
 }
 
 
 -(Fraction*)reciprocal 
 {
     
-    printf(" Running reciprocal method\n") ;
     
-    return nil ;
+    int a = [self numerator];
+    int b = [self denominator];
+    int newNumerator = b ;
+    int newDenominator = a ;
+    Fraction* theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+                                               andDenominator:newDenominator];
+    return theAnswer;
 }
 
 
