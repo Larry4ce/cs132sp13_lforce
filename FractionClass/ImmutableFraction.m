@@ -65,7 +65,19 @@
 
 -(Fraction*)add:(Fraction*) ;
 {
+    int a =[self numerator] ;
+    int b = [self denominator] ;
+    int c = [RHS numerator] ;
+    int d = [RHS denominator] ;
     
+    int newNumerator = a*d+c*b ;
+    int newDenominator = b*d ;
+
+    Fraction* theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+                                               andDenominator:newDenominator];
+    
+    
+ return theAnswer
 }
 
 -(Fraction*)subtractFrom:(Fraction*) 
