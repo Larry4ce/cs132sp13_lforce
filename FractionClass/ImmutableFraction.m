@@ -70,17 +70,14 @@
 
 -(Fraction*)subtractFrom:(Fraction*) 
 {
-    
-    printf(" Running subtractFrom method\n") ;
-    
-    return nil ;
+    return [self add: [negative RHS]] ;
 }
 
 -(Fraction*)minus:(Fraction*) 
 {
     
 
-    Fraction* theAnswer =  (LHS)subtractFrom:(RHS)
+    Fraction* theAnswer =  [self subtractFrom : RHS]
     
     return theAnswer;
 
