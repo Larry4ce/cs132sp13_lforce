@@ -94,9 +94,8 @@
 -(Fraction*)divideBy:(Fraction*) 
 {
     
-    printf(" Running divideBy method\n") ;
+return [self multiply:[RHS reciprocal]];
     
-    return nil ;
 }
 
 -(Fraction*)divideInto:(Fraction*)
