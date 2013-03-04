@@ -95,12 +95,24 @@
 
 }
 
--(Fraction*)multiplyBy:(Fraction*) 
+-(Fraction*)multiply:(Fraction*)
+{
+int a =[self numerator] ;
+int b = [self denominator] ;
+int c = [RHS numerator] ;
+int d = [RHS denominator] ;
+
+int newNumerator = a*c;
+int newDenominator = b*d ;
+
+Fraction* theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+                                           andDenominator:newDenominator];
+
+}
+    
+-(Fraction*)multiplyBy:(Fraction*)
 {
     
-    printf(" Running multiplyBy method\n ") ;
-    
-    return nil ;
 }
 
 -(Fraction*)divideBy:(Fraction*) 

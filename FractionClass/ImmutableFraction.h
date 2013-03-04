@@ -32,6 +32,8 @@
 
 -(Fraction*)minus:(Fraction*) ;
 
+-(Fraction*)multiply:(Fraction*)
+
 -(Fraction*)multiplyBy:(Fraction*) ;
 
 -(Fraction*)divideBy:(Fraction*) ;
