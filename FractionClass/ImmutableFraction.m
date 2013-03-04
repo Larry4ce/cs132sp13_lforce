@@ -100,10 +100,9 @@ return [self multiply:[RHS reciprocal]];
 
 -(Fraction*)divideInto:(Fraction*)
 {
+
+return [RHS multiply:[self reciprocal]];
     
-    printf(" Running divideInto method\n") ;
-    
-    return nil ;
 }
 
 -(Fraction*)reduced (Fraction*) ;
