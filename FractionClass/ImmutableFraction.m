@@ -103,6 +103,16 @@
     return nil ;
 }
 
+-(Fraction*)reduced (Fraction*) ;
+{
+    int a = [self numerator];
+    int b = [self denominator];
+    int newNumerator = a / GCD( a , b ) ;
+    int newDenominator = b / GCD( a , b ) ;
+    Fraction* theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+                                               andDenominator:newDenominator];
+    return theAnswer;
+}
 
 @end
 

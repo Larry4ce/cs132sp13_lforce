@@ -36,6 +36,8 @@
 
 -(Fraction*)divideInto:(Fraction*) ;
 
+-(Fraction*)reduced (Fraction*) ;
+
 
 @end
 
