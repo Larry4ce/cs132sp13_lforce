@@ -42,9 +42,20 @@
 
 -(WCSFraction*)reduced (WCSFraction*) ;
 
+-(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction
+
+- (BOOL)isEqual:(id)other
+
+-(NSUInteger) hash
+
 
 @end
 
-int GCD(int x, int y) ;
 
-@end
+int gcd(int a, int b)
+{ //Euclidean algorithm. It works!
+    if(b==0) return a;
+    else return gcd(b, a%b);
+}
+
+
