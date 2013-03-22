@@ -53,7 +53,7 @@
 }
 
 
--(WCSFraction*)sumWith:(WCSFraction*)
+-(WCSFraction*)sumWith:(WCSFraction*) RHS
 {
     
     printf(" Running sumwith method\n") ;
@@ -61,7 +61,7 @@
     return nil ;
 }
 
--(WCSFraction*)add:(WCSFraction*) ;
+-(WCSFraction*)add:(WCSFraction*) RHS
 {
     int a =[self numerator] ;
     int b = [self denominator] ;
@@ -75,15 +75,15 @@
                                                andDenominator:newDenominator];
     
     
-    return theAnswer
+    return theAnswer ;
 }
 
--(WCSFraction*)subtractFrom:(WCSFraction*)
+-(WCSFraction*)subtractFrom:(WCSFraction*) RHS
 {
     return [self add: [negative RHS]] ;
 }
 
--(WCSFraction*)minus:(WCSFraction*)
+-(WCSFraction*)minus:(WCSFraction*) RHS
 {
     
     
@@ -93,7 +93,7 @@
     
 }
 
--(WCSFraction*)multiply:(WCSFraction*)
+-(WCSFraction*)multiply:(WCSFraction*) RHS
 {
     int a =[self numerator] ;
     int b = [self denominator] ;
@@ -108,12 +108,12 @@
     
 }
 
--(WCSFraction*)multiplyBy:(WCSFraction*)
+-(WCSFraction*)multiplyBy:(WCSFraction*) RHS
 {
     
 }
 
--(WCSFraction*)divideBy:(WCSFraction*)
+-(WCSFraction*)divideBy:(WCSFraction*) RHS
 {
     
     return [self multiply:[RHS reciprocal]];

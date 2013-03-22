@@ -14,9 +14,10 @@
 
 @property(readonly) int denominator;
 
--(void)initWithNumerator:(int)andDenominator:(int) ;
+-(void)initWithNumerator:(int) LHS
+          andDenominator:(int) RHS ;
 
--(void)initWithFraction:(WCSFraction*) ;
+-(void)initWithFraction:(WCSFraction*) RHS ;
 
 -(float)floatValue ;
 
@@ -24,29 +25,29 @@
 
 -(WCSFraction*)reciprocal ;
 
--(WCSFraction*)sumWith:(WCSFraction*) ;
+-(WCSFraction*)sumWith:(WCSFraction*) RHS ;
 
--(WCSFraction*)subtractFrom:(WCSFraction*) ;
+-(WCSFraction*)subtractFrom:(WCSFraction*) RHS ;
 
--(WCSFraction*)add:(WCSFraction*) ;
+-(WCSFraction*)add:(WCSFraction*) RHS ;
 
--(WCSFraction*)minus:(WCSFraction*) ;
+-(WCSFraction*)minus:(WCSFraction*) RHS ;
 
--(WCSFraction*)multiply:(WCSFraction*)
+-(WCSFraction*)multiply:(WCSFraction*) RHS ;
 
--(WCSFraction*)multiplyBy:(WCSFraction*) ;
+-(WCSFraction*)multiplyBy:(WCSFraction*) RHS ;
 
--(WCSFraction*)divideBy:(WCSFraction*) ;
+-(WCSFraction*)divideBy:(WCSFraction*) RHS ;
 
--(WCSFraction*)divideInto:(WCSFraction*) ;
+-(WCSFraction*)divideInto:(WCSFraction*) RHS ;
 
--(WCSFraction*)reduced (WCSFraction*) ;
+-(WCSFraction*)reduced : (WCSFraction*) RHS ;
 
--(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction
+-(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction ;
 
-- (BOOL)isEqual:(id)other
+- (BOOL)isEqual:(id)other ;
 
--(NSUInteger) hash
+-(NSUInteger) hash ;
 
 
 @end
