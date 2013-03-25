@@ -14,49 +14,29 @@
 
 @property(readonly) int denominator;
 
--(void)initWithNumerator:(int) LHS
+-(void) initWithNumerator:(int) LHS
           andDenominator:(int) RHS ;
-
 -(void)initWithFraction:(WCSFraction*) RHS ;
-
 -(float)floatValue ;
-
 -(WCSFraction*)negative ;
-
 -(WCSFraction*)reciprocal ;
-
 -(WCSFraction*)sumWith:(WCSFraction*) RHS ;
-
 -(WCSFraction*)subtractFrom:(WCSFraction*) RHS ;
-
 -(WCSFraction*)add:(WCSFraction*) RHS ;
-
 -(WCSFraction*)minus:(WCSFraction*) RHS ;
-
 -(WCSFraction*)multiply:(WCSFraction*) RHS ;
-
 -(WCSFraction*)multiplyBy:(WCSFraction*) RHS ;
-
 -(WCSFraction*)divideBy:(WCSFraction*) RHS ;
-
 -(WCSFraction*)divideInto:(WCSFraction*) RHS ;
-
 -(WCSFraction*)reduced : (WCSFraction*) RHS ;
-
 -(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction ;
-
 - (BOOL)isEqual:(id)other ;
-
 -(NSUInteger) hash ;
 
 
 @end
 
 
-int gcd(int a, int b)
-{ //Euclidean algorithm. It works!
-    if(b==0) return a;
-    else return gcd(b, a%b);
-}
+int gcd(int a, int b) ;
 
 

@@ -24,23 +24,23 @@
 
 -(Fraction*)reciprocal ;
 
--(Fraction*)sumWith:(Fraction*) ;
+-(Fraction*)sumWith:(Fraction*) RHS ;
 
--(Fraction*)subtractFrom:(Fraction*) ;
+-(Fraction*)subtractFrom:(Fraction*) RHS ;
 
--(Fraction*)add:(Fraction*) ;
+-(Fraction*)add:(Fraction*) RHS ;
 
--(Fraction*)minus:(Fraction*) ;
+-(Fraction*)minus:(Fraction*) RHS ;
 
--(Fraction*)multiply:(Fraction*)
+-(Fraction*)multiply:(Fraction*) RHS ;
 
--(Fraction*)multiplyBy:(Fraction*) ;
+-(Fraction*)multiplyBy:(Fraction*) RHS ;
 
--(Fraction*)divideBy:(Fraction*) ;
+-(Fraction*)divideBy:(Fraction*) RHS ;
 
--(Fraction*)divideInto:(Fraction*) ;
+-(Fraction*)divideInto:(Fraction*) RHS ;
 
--(Fraction*)reduced (Fraction*) ;
+-(Fraction*)reduced (Fraction*) RHS ;
 
 
 @end

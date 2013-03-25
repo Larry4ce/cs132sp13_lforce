@@ -26,6 +26,12 @@
     return 0;
 }
 
+-(void) initWithNumerator:(int) LHS
+           andDenominator:(int) RHS
+{
+    // something goes here.....
+}
+
 -(WCSFraction*)negative
 {
     
@@ -71,8 +77,9 @@
     int newNumerator = a*d+c*b ;
     int newDenominator = b*d ;
     
-    WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
-                                               andDenominator:newDenominator];
+    WCSFraction* theAnswer =
+    [[WCSFraction alloc] initWithNumerator:newNumerator
+                            andDenominator:newDenominator];
     
     
     return theAnswer ;
@@ -80,14 +87,14 @@
 
 -(WCSFraction*)subtractFrom:(WCSFraction*) RHS
 {
-    return [self add: [negative RHS]] ;
+    return [self add: [RHS negative]] ;
 }
 
 -(WCSFraction*)minus:(WCSFraction*) RHS
 {
     
     
-    WCSFraction* theAnswer =  [self subtractFrom : RHS]
+    WCSFraction* theAnswer =  [self subtractFrom : RHS] ;
     
     return theAnswer;
     
@@ -110,6 +117,7 @@
 
 -(WCSFraction*)multiplyBy:(WCSFraction*) RHS
 {
+    return Nil;
     
 }
 
@@ -120,19 +128,18 @@
     
 }
 
--(WCSFraction*)divideInto:(WCSFraction*)
+-(WCSFraction*)divideInto:(WCSFraction*) RHS
 {
     
-    return [RHS multiply:[self reciprocal]];
-    
+    return [RHS multiply:[self reciprocal]];    
 }
 
--(WCSFraction*)reduced (WCSFraction*) ;
+-(WCSFraction*)reduced : (WCSFraction*) RHS
 {
     int a = [self numerator];
     int b = [self denominator];
-    int newNumerator = a / GCD( a , b ) ;
-    int newDenominator = b / GCD( a , b ) ;
+    int newNumerator = a / gcd( a , b ) ;
+    int newDenominator = b / gcd( a , b ) ;
     WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                                andDenominator:newDenominator];
     return theAnswer;

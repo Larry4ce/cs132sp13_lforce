@@ -55,7 +55,7 @@
 }
 
 
--(Fraction*)sumWith:(Fraction*) 
+-(Fraction*)sumWith:(Fraction*) RHS
 {
     
     printf(" Running sumwith method\n") ;
@@ -63,7 +63,7 @@
     return nil ;
 }
 
--(Fraction*)add:(Fraction*) ;
+-(Fraction*)add:(Fraction*) RHS
 {
     int a =[self numerator] ;
     int b = [self denominator] ;
@@ -80,12 +80,12 @@
  return theAnswer
 }
 
--(Fraction*)subtractFrom:(Fraction*) 
+-(Fraction*)subtractFrom:(Fraction*) RHS
 {
     return [self add: [negative RHS]] ;
 }
 
--(Fraction*)minus:(Fraction*) 
+-(Fraction*)minus:(Fraction*) RHS
 {
     
 
@@ -95,7 +95,7 @@
 
 }
 
--(Fraction*)multiply:(Fraction*)
+-(Fraction*)multiply:(Fraction*) RHS
 {
 int a =[self numerator] ;
 int b = [self denominator] ;
@@ -110,19 +110,19 @@ Fraction* theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
 
 }
     
--(Fraction*)multiplyBy:(Fraction*)
+-(Fraction*)multiplyBy:(Fraction*) RHS
 {
     
 }
 
--(Fraction*)divideBy:(Fraction*) 
+-(Fraction*)divideBy:(Fraction*) RHS
 {
     
 return [self multiply:[RHS reciprocal]];
     
 }
 
--(Fraction*)divideInto:(Fraction*)
+-(Fraction*)divideInto:(Fraction*) RHS
 {
 
 return [RHS multiply:[self reciprocal]];
