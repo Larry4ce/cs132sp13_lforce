@@ -45,7 +45,9 @@
 
 -(void)modifyByNegating
 {
+    WCSFraction* answer = [self negative] ;
     
+    [self setNumerator: [answer numerator] andDenominator: [answer denominator]] ;
 }
 
 
