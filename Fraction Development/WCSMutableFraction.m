@@ -9,4 +9,19 @@
 #import "WCSMutableFraction.h"
 
 @implementation WCSMutableFraction
+
+-(void) setNumerator: (int) Num
+      andDenominator: (int) Denom
+{
+    int GCD = gcd(Num, Denom) ;
+    
+    [self setNumerator: Num/GCD] ;
+    [self setDenominator:Denom/GCD] ;
+    
+}
+
+
+
+
+
 @end

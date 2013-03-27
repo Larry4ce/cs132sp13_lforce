@@ -17,8 +17,8 @@
 
 
 
--(void) setNumerator: (void) Num
-      andDenominator: (void) Denom ;
+-(void) setNumerator: (int) Num
+      andDenominator: (int) Denom ;
 -(void)modifyByAdding: (void) Added ;
 -(void)modifyByMultiplying: (void) Multiplied ;
 -(void)modifyByInverting ;
