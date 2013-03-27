@@ -11,4 +11,8 @@
 
 @interface WCSMutableFraction : WCSFraction
 
+@property(readwrite, assign) int numerator;
+
+@property(readwrite, assign) int denominator;
+
 @end

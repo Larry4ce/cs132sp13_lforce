@@ -10,9 +10,9 @@
 
 @interface WCSFraction : NSObject
 
-@property(readonly) int numerator;
+@property(readonly, assign) int numerator;
 
-@property(readonly) int denominator;
+@property(readonly, assign) int denominator;
 
 -(id) initWithNumerator:(int) LHS
           andDenominator:(int) RHS ;

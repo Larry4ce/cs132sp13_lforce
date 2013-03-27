@@ -33,7 +33,8 @@ self = [self initWithNumerator:1
 {
     self = [super init];
     if (self) {
-        //initializations
+        _numerator = LHS ;
+        _denominator = RHS ;
     }
     return self;
 }
