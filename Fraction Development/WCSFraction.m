@@ -12,10 +12,11 @@
 
 -(id)init
 {
+self = [self initWithNumerator:1
+         andDenominator:1 ] ;
     
-    printf(" Running init method\n") ;
+    return self ;
     
-    return 0;
 }
 
 -(id)description
@@ -26,10 +27,28 @@
     return 0;
 }
 
+
 -(id) initWithNumerator:(int) LHS
            andDenominator:(int) RHS
 {
-  
+    self = [super init];
+    if (self) {
+        //initializations
+    }
+    return self;
+}
+
+-(void)initWithFraction:(WCSFraction*) RHS
+{
+    //stub
+
+}
+
+
+-(float)floatValue
+{
+    //stub
+    return 0 ;
 }
 
 -(WCSFraction*)negative

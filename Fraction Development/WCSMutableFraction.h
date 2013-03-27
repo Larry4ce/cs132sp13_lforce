@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WCSFraction.h"
 
 @interface WCSMutableFraction : WCSFraction
 
