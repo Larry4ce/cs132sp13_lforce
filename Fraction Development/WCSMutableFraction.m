@@ -28,9 +28,12 @@
     [self setNumerator: [answer numerator] andDenominator: [answer denominator]] ;
 }
 
--(void)modifyByMultiplying: (int) Multiplied
+-(void)modifyByMultiplying: (WCSFraction*) Multiplied
 {
+
+    WCSFraction* answer = [self multiplyBy:Multiplied] ;
     
+    [self setNumerator: [answer numerator] andDenominator: [answer denominator]] ;
 }
 
 -(void)modifyByInverting

@@ -20,7 +20,7 @@
 -(void) setNumerator: (int) Num
       andDenominator: (int) Denom ;
 -(void)modifyByAdding: (WCSFraction*) Added ;
--(void)modifyByMultiplying: (int) Multiplied ;
+-(void)modifyByMultiplying: (WCSFraction*) Multiplied ;
 -(void)modifyByInverting ;
 -(void)modifyByNegating ;
 
