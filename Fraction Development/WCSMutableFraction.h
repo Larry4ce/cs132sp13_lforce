@@ -15,4 +15,13 @@
 
 @property(readwrite, assign) int denominator;
 
+
+
+-(void) setNumerator: (void) Num
+      andDenominator: (void) Denom ;
+-(void)modifyByAdding: (void) Added ;
+-(void)modifyByMultiplying: (void) Multiplied ;
+-(void)modifyByInverting ;
+-(void)modifyByNegating ;
+
 @end
