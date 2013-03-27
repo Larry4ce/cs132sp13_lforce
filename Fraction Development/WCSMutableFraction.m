@@ -38,7 +38,9 @@
 
 -(void)modifyByInverting
 {
+    WCSFraction* answer = [self reciprocal] ;
     
+    [self setNumerator: [answer numerator] andDenominator: [answer denominator]] ;
 }
 
 -(void)modifyByNegating
