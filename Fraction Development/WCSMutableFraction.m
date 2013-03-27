@@ -10,6 +10,10 @@
 
 @implementation WCSMutableFraction
 
+@synthesize numerator = _AOII_numerator;
+@synthesize denominator = _AOII_denominator;
+
+
 -(void) setNumerator: (int) Num
       andDenominator: (int) Denom
 {
