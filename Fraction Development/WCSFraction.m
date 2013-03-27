@@ -26,10 +26,10 @@
     return 0;
 }
 
--(void) initWithNumerator:(int) LHS
+-(id) initWithNumerator:(int) LHS
            andDenominator:(int) RHS
 {
-    // something goes here.....
+  
 }
 
 -(WCSFraction*)negative
@@ -112,7 +112,9 @@
     
     WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                                andDenominator:newDenominator];
-    
+
+    return theAnswer ;
+
 }
 
 -(WCSFraction*)multiplyBy:(WCSFraction*) RHS

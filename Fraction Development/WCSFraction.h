@@ -14,7 +14,7 @@
 
 @property(readonly) int denominator;
 
--(void) initWithNumerator:(int) LHS
+-(id) initWithNumerator:(int) LHS
           andDenominator:(int) RHS ;
 -(void)initWithFraction:(WCSFraction*) RHS ;
 -(float)floatValue ;
