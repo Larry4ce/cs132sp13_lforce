@@ -21,6 +21,27 @@
 }
 
 
+-(void)modifyByAdding: (WCSFraction*) Added
+{
+   WCSFraction* answer = [self add:Added] ;
+    
+    [self setNumerator: [answer numerator] andDenominator: [answer denominator]] ;
+}
+
+-(void)modifyByMultiplying: (int) Multiplied
+{
+    
+}
+
+-(void)modifyByInverting
+{
+    
+}
+
+-(void)modifyByNegating
+{
+    
+}
 
 
 

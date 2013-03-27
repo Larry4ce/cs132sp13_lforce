@@ -19,8 +19,8 @@
 
 -(void) setNumerator: (int) Num
       andDenominator: (int) Denom ;
--(void)modifyByAdding: (void) Added ;
--(void)modifyByMultiplying: (void) Multiplied ;
+-(void)modifyByAdding: (WCSFraction*) Added ;
+-(void)modifyByMultiplying: (int) Multiplied ;
 -(void)modifyByInverting ;
 -(void)modifyByNegating ;
 
