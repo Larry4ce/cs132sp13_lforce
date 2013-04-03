@@ -164,7 +164,8 @@ self = [self initWithNumerator:1
     int newDenominator = b / gcd( a , b ) ;
     WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                                andDenominator:newDenominator];
-    return theAnswer;
+    
+        return theAnswer;
 }
 
 
