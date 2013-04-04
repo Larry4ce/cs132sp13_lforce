@@ -13,30 +13,49 @@
 int main(int argc, char *argv[])
 {
     
-    printf("Checking if 1/3 - 1/2 works... \n") ;
+    //first core task
     
-    WCSFraction* first;
-    WCSFraction* second;
+    
+    WCSFraction* oneThird;
+    WCSFraction* oneHalf;
     WCSFraction* answer;
-    WCSFraction* goal;
     
-    first = [first initWithNumerator:1 andDenominator:3] ;
-    second = [second initWithNumerator:1 andDenominator:2] ;
-    goal = [second initWithNumerator:-1 andDenominator:6] ;
+    oneThird = [oneThird initWithNumerator:1
+                      andDenominator:3] ;
     
-    answer = [second subtractFrom:first] ;
+    oneHalf = [oneHalf initWithNumerator:1
+                        andDenominator:2] ;
     
-    if(answer == goal)
+    answer = [oneHalf subtractFrom:oneThird] ;
+
         {
-            printf("1/3 - 1/2 = -1/6 succeeded \n");
-        }
-    else
-        {
-            printf("error \n");
+            NSLog(@"the numerator is %d and the denominator is %d", [answer numerator] , [answer denominator]) ;
         }
     
     
     
+    
+    //second core task
+    
+     WCSMutableFraction* mutant;
+     WCSFraction* oneEigth;
+     WCSFraction* two;
+    
+    [mutant setNumerator: 5
+            andDenominator: 8 ] ;
+    
+    oneEigth = [oneEigth initWithNumerator:1
+                         andDenominator:8] ;
+    
+    two = [two initWithNumerator:4
+                    andDenominator:2] ;
+    
+    [mutant modifyByAdding:[oneEigth negative]];
+    [mutant modifyByAdding:two] ;
+    
+    {
+        NSLog(@"the numerator is %d and the denominator is %d", [mutant numerator] , [mutant denominator]) ;
+    }
     
     return NSApplicationMain(argc, (const char **)argv);
 }

@@ -21,10 +21,9 @@ self = [self initWithNumerator:1
 
 -(id)description
 {
+
     
-    printf(" Running description method\n") ;
-    
-    return 0;
+    return 0 ;
 }
 
 
@@ -33,8 +32,8 @@ self = [self initWithNumerator:1
 {
     self = [super init];
     if (self) {
-        _numerator = LHS ;
-        _denominator = RHS ;
+        setNumerator = LHS ;
+        setDenominator = RHS ;
     }
     return self;
 }
