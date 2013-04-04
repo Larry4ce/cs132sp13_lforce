@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "WCSFraction.h"
 
-@interface WCSMutableFraction : WCSFraction
+@interface WCSMutableFraction : WCSFraction <NSMutableCopying>
 
-@property(readwrite, assign) int numerator;
+@
+property(readwrite, assign) int numerator;
 
 @property(readwrite, assign) int denominator;
 

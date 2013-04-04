@@ -32,8 +32,8 @@ self = [self initWithNumerator:1
 {
     self = [super init];
     if (self) {
-        setNumerator = LHS ;
-        setDenominator = RHS ;
+        [setNumerator LHS] ;
+        [setDenominator  RHS] ;
     }
     return self;
 }
