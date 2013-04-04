@@ -10,6 +10,12 @@
 
 @implementation WCSFraction
 
+-(id)copyWithZone:(NSZone *)zone
+{
+    //stub
+    return 0;
+}
+
 -(id)init
 {
 self = [self initWithNumerator:1
@@ -32,8 +38,8 @@ self = [self initWithNumerator:1
 {
     self = [super init];
     if (self) {
-        [setNumerator LHS] ;
-        [setDenominator  RHS] ;
+        [self setNumerator: LHS] ;
+        [self setDenominator:  RHS] ;
     }
     return self;
 }

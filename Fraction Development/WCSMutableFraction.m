@@ -24,6 +24,12 @@
     
 }
 
+-(id)mutableCopyWithZone:(NSZone *)zone
+{
+    //stub
+    return 0;
+}
+
 
 -(void)modifyByAdding: (WCSFraction*) Added
 {
