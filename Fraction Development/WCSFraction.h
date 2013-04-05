@@ -16,7 +16,7 @@
 
 -(id) initWithNumerator:(int) LHS
           andDenominator:(int) RHS ;
--(void)initWithFraction:(WCSFraction*) RHS ;
+-(id)initWithFraction:(WCSFraction*) RHS ;
 -(float)floatValue ;
 -(WCSFraction*)negative ;
 -(WCSFraction*)reciprocal ;

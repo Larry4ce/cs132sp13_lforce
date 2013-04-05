@@ -20,12 +20,13 @@ int main(int argc, char *argv[])
     WCSFraction* oneHalf;
     WCSFraction* answer;
     
-    oneThird = [oneThird initWithNumerator:1
+    oneThird = [[WCSFraction alloc] initWithNumerator:1
                       andDenominator:3] ;
     
-    oneHalf = [oneHalf initWithNumerator:1
+    oneHalf = [[WCSFraction alloc] initWithNumerator:1
                         andDenominator:2] ;
     
+    answer = [WCSFraction alloc];
     answer = [oneHalf subtractFrom:oneThird] ;
 
         {
@@ -41,13 +42,14 @@ int main(int argc, char *argv[])
      WCSFraction* oneEigth;
      WCSFraction* two;
     
+    mutant = [WCSMutableFraction alloc];
     [mutant setNumerator: 5
             andDenominator: 8 ] ;
     
-    oneEigth = [oneEigth initWithNumerator:1
+    oneEigth = [[WCSFraction alloc] initWithNumerator:1
                          andDenominator:8] ;
     
-    two = [two initWithNumerator:4
+    two = [[WCSFraction alloc] initWithNumerator:4
                     andDenominator:2] ;
     
     [mutant modifyByAdding:[oneEigth negative]];

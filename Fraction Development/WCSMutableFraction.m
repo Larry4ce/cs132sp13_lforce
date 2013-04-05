@@ -26,8 +26,11 @@
 
 -(id)mutableCopyWithZone:(NSZone *)zone
 {
-    //stub
-    return 0;
+    
+    WCSFraction* somefraction;
+    somefraction = [[WCSFraction allocWithZone:zone]initWithFraction:self];
+    return somefraction;
+    
 }
 
 

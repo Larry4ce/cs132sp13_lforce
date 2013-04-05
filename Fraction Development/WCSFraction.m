@@ -9,11 +9,14 @@
 #import "WCSFraction.h"
 
 @implementation WCSFraction
+@synthesize numerator = _initializedNumerator;
+@synthesize denominator = _initializedDenominator;
 
 -(id)copyWithZone:(NSZone *)zone
 {
-    //stub
-    return 0;
+    WCSFraction* somefraction;
+    somefraction = [[WCSFraction allocWithZone:zone]initWithFraction:self];
+    return somefraction;
 }
 
 -(id)init
@@ -28,6 +31,7 @@ self = [self initWithNumerator:1
 -(id)description
 {
 
+    //stub
     
     return 0 ;
 }
@@ -38,23 +42,33 @@ self = [self initWithNumerator:1
 {
     self = [super init];
     if (self) {
-        [self setNumerator: LHS] ;
-        [self setDenominator:  RHS] ;
+        _initializedNumerator = LHS;
+        _initializedDenominator = RHS;
     }
     return self;
 }
 
--(void)initWithFraction:(WCSFraction*) RHS
+-(id)initWithFraction:(WCSFraction*) RHS
 {
-    //stub
+    WCSFraction* someFraction;
+    
+    someFraction = [[WCSFraction alloc] initWithNumerator:[RHS numerator] andDenominator:[RHS denominator]];
 
+    return someFraction;
 }
 
 
 -(float)floatValue
 {
-    //stub
-    return 0 ;
+    if([self denominator]==0)
+    {
+        return 0;
+    }
+    else
+    {
+    float answer = [self numerator]/[self denominator];
+    return answer ;
+    }
 }
 
 -(WCSFraction*)negative
