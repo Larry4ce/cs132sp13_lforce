@@ -141,7 +141,7 @@
     
     [self setNumberOnScreen : result] ;
     [self clearOperation] ;
-    [self clearOperation] ;
+    [self clearAccumulator];
 }
 
 
