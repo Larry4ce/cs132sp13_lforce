@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
                         andDenominator:2] ;
     
     answer = [WCSFraction alloc];
-    answer = [oneHalf subtractFrom:oneThird] ;
+    answer = [oneThird minus:oneHalf] ;
 
         {
             NSLog(@"the numerator is %d and the denominator is %d", [answer numerator] , [answer denominator]) ;

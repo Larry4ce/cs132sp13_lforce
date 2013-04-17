@@ -14,23 +14,41 @@
 
 @property(readonly, assign) int denominator;
 
--(id) initWithNumerator:(int) LHS
-          andDenominator:(int) RHS ;
--(id)initWithFraction:(WCSFraction*) RHS ;
+-(id) initWithNumerator:(int) theNumerator
+          andDenominator:(int) theDenominator ;
+
+-(id)initWithFraction:(WCSFraction*) theFraction ;
+
+-(id)initWithInteger:(int) theInteger ;
+
 -(float)floatValue ;
+
 -(WCSFraction*)negative ;
+
 -(WCSFraction*)reciprocal ;
--(WCSFraction*)sumWith:(WCSFraction*) RHS ;
--(WCSFraction*)subtractFrom:(WCSFraction*) RHS ;
--(WCSFraction*)add:(WCSFraction*) RHS ;
--(WCSFraction*)minus:(WCSFraction*) RHS ;
--(WCSFraction*)multiply:(WCSFraction*) RHS ;
--(WCSFraction*)multiplyBy:(WCSFraction*) RHS ;
--(WCSFraction*)divideBy:(WCSFraction*) RHS ;
--(WCSFraction*)divideInto:(WCSFraction*) RHS ;
--(WCSFraction*)reduced : (WCSFraction*) RHS ;
+
+-(WCSFraction*)sumWith:(WCSFraction*) theFraction ;
+
+-(WCSFraction*)subtractFrom:(WCSFraction*) theFraction ;
+
+-(WCSFraction*)add:(WCSFraction*) theFraction ;
+
+-(WCSFraction*)minus:(WCSFraction*) theFraction ;
+
+-(WCSFraction*)multiply:(WCSFraction*) theFraction ;
+
+-(WCSFraction*)multiplyBy:(int) theInteger ;
+
+-(WCSFraction*)divideBy:(WCSFraction*) theFraction ;
+
+-(WCSFraction*)divideInto:(WCSFraction*) theFraction ;
+
+-(WCSFraction*)reduced : (WCSFraction*) theFraction ;
+
 -(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction ;
+
 - (BOOL)isEqual:(id)other ;
+
 -(NSUInteger) hash ;
 
 

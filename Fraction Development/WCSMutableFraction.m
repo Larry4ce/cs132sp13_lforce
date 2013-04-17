@@ -44,7 +44,7 @@
 -(void)modifyByMultiplying: (WCSFraction*) Multiplied
 {
 
-    WCSFraction* answer = [self multiplyBy:Multiplied] ;
+    WCSFraction* answer = [self multiply: Multiplied] ;
     
     [self setNumerator: [answer numerator] andDenominator: [answer denominator]] ;
 }
