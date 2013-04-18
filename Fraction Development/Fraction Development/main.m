@@ -26,11 +26,10 @@ int main(int argc, char *argv[])
     oneHalf = [[WCSFraction alloc] initWithNumerator:1
                         andDenominator:2] ;
     
-    answer = [WCSFraction alloc];
     answer = [oneThird minus:oneHalf] ;
 
         {
-            NSLog(@"the numerator is %d and the denominator is %d", [answer numerator] , [answer denominator]) ;
+            NSLog(@" %@ minus %@ equals %@. \n ", oneThird , oneHalf , answer ) ;
         }
     
     
@@ -56,7 +55,7 @@ int main(int argc, char *argv[])
     [mutant modifyByAdding:two] ;
     
     {
-        NSLog(@"the numerator is %d and the denominator is %d", [mutant numerator] , [mutant denominator]) ;
+        NSLog(@"5/8 minus %@ plus %@ equals %@" , oneEigth , two , mutant) ;
     }
     
     return NSApplicationMain(argc, (const char **)argv);

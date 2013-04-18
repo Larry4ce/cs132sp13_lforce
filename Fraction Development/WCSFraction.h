@@ -37,13 +37,13 @@
 
 -(WCSFraction*)multiply:(WCSFraction*) theFraction ;
 
--(WCSFraction*)multiplyBy:(int) theInteger ;
+-(WCSFraction*)multiplyBy:(WCSFraction*) theFraction ;
 
 -(WCSFraction*)divideBy:(WCSFraction*) theFraction ;
 
 -(WCSFraction*)divideInto:(WCSFraction*) theFraction ;
 
--(WCSFraction*)reduced : (WCSFraction*) theFraction ;
+-(WCSFraction*)reduced;
 
 -(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction ;
 

@@ -31,9 +31,10 @@ self = [self initWithNumerator:1
 -(id)description
 {
 
-    //stub
     
-    return 0 ;
+return [NSString stringWithFormat: @"%d/%d" , [self numerator] , [self denominator]];
+    
+
 }
 
 
@@ -45,7 +46,7 @@ self = [self initWithNumerator:1
         _initializedNumerator = theNumerator;
         _initializedDenominator = theDenominator;
     }
-    return self;
+    return [self reduced];
 }
 
 -(id)initWithFraction:(WCSFraction*) theFraction
@@ -87,7 +88,7 @@ self = [self initWithNumerator:1
     int a = [self numerator];
     int b = [self denominator];
     int newNumerator = 0-a ;
-    int newDenominator = 0-b ;
+    int newDenominator = b ;
     WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                                andDenominator:newDenominator];
     return theAnswer;
@@ -108,12 +109,11 @@ self = [self initWithNumerator:1
 }
 
 
--(WCSFraction*)sumWith:(WCSFraction*) RHS
+-(WCSFraction*)sumWith:(WCSFraction*) theFraction
 {
     
-    printf(" Running sumwith method\n") ;
     
-    return nil ;
+    return [theFraction add:self] ;
 }
 
 -(WCSFraction*)add:(WCSFraction*) theFraction
@@ -130,7 +130,7 @@ self = [self initWithNumerator:1
     [[WCSFraction alloc] initWithNumerator:newNumerator
                             andDenominator:newDenominator] ;
     
-    WCSFraction* theAnswerTwo = [theAnswerOne reduced: theAnswerOne];
+    WCSFraction* theAnswerTwo = [theAnswerOne reduced];
     
     
     return theAnswerTwo ;
@@ -164,19 +164,15 @@ self = [self initWithNumerator:1
     WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                                andDenominator:newDenominator];
 
-    return theAnswer ;
+    return [theAnswer reduced] ;
 
 }
 
--(WCSFraction*)multiplyBy:(int) theInteger
+-(WCSFraction*)multiplyBy:(WCSFraction*) theFraction
 {
-    WCSFraction* theAnswer;
+    WCSFraction*  theAnswer;
     
-    int numer = [self numerator] * theInteger ;
-    int denom = [self denominator] ;
-    
-    theAnswer = [[WCSFraction alloc] initWithNumerator:numer
-                                        andDenominator:denom];
+    theAnswer = [theFraction multiply: self];
     
     return theAnswer;
 }
@@ -194,24 +190,24 @@ self = [self initWithNumerator:1
     return [theFraction multiply:[self reciprocal]];
 }
 
--(WCSFraction*)reduced : (WCSFraction*) theFraction
+-(WCSFraction*)reduced
 {
     int a = [self numerator];
     int b = [self denominator];
     int newNumerator = a / gcd( a , b ) ;
     int newDenominator = b / gcd( a , b ) ;
     
-    int c = [theFraction numerator];
-    int d = [theFraction denominator];
-    
-    int newNumeratortwo = c / gcd( c , d ) ;
-    int newDenominatortwo = d / gcd( c , d ) ;
+    if (newDenominator<0)
+    {
+        newDenominator = newDenominator*-1;
+        newNumerator = newNumerator*-1;
+    }
     
     
     WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                                andDenominator:newDenominator];
     
-        return theAnswer;
+        return theAnswer ;
 }
 
 
