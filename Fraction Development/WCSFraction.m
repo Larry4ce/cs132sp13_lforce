@@ -32,8 +32,23 @@ self = [self initWithNumerator:1
 {
 
     
-return [NSString stringWithFormat: @"%d/%d" , [self numerator] , [self denominator]];
+if([self denominator] == 1)
+{
+    return [NSString stringWithFormat: @"%d" , [self numerator]];
+}
+    else
     
+        if([self denominator] == 0)
+        {
+            return [NSString stringWithFormat: @"ERROR" ];
+        }
+        else
+
+        
+        
+    {
+        return [NSString stringWithFormat: @"%d/%d" , [self numerator] , [self denominator]];
+    }
 
 }
 
@@ -41,12 +56,26 @@ return [NSString stringWithFormat: @"%d/%d" , [self numerator] , [self denominat
 -(id) initWithNumerator:(int) theNumerator
            andDenominator:(int) theDenominator
 {
+    
+    int a = theNumerator;
+    int b = theDenominator;
+    int newNumerator = a / gcd( a , b ) ;
+    int newDenominator = b / gcd( a , b ) ;
+    
+    if (newDenominator<0)
+    {
+        newDenominator = newDenominator*-1;
+        newNumerator = newNumerator*-1;
+    }
+    
+    
+    
     self = [super init];
     if (self) {
-        _initializedNumerator = theNumerator;
-        _initializedDenominator = theDenominator;
+        _initializedNumerator = newNumerator;
+        _initializedDenominator = newDenominator;
     }
-    return [self reduced];
+    return self;
 }
 
 -(id)initWithFraction:(WCSFraction*) theFraction
@@ -126,14 +155,12 @@ return [NSString stringWithFormat: @"%d/%d" , [self numerator] , [self denominat
     int newNumerator = a*d+c*b ;
     int newDenominator = b*d ;
     
-    WCSFraction* theAnswerOne =
+    WCSFraction* theAnswer =
     [[WCSFraction alloc] initWithNumerator:newNumerator
                             andDenominator:newDenominator] ;
     
-    WCSFraction* theAnswerTwo = [theAnswerOne reduced];
     
-    
-    return theAnswerTwo ;
+    return theAnswer;
 }
 
 -(WCSFraction*)subtractFrom:(WCSFraction*) theFraction
@@ -164,7 +191,7 @@ return [NSString stringWithFormat: @"%d/%d" , [self numerator] , [self denominat
     WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                                andDenominator:newDenominator];
 
-    return [theAnswer reduced] ;
+    return theAnswer ;
 
 }
 
@@ -190,25 +217,6 @@ return [NSString stringWithFormat: @"%d/%d" , [self numerator] , [self denominat
     return [theFraction multiply:[self reciprocal]];
 }
 
--(WCSFraction*)reduced
-{
-    int a = [self numerator];
-    int b = [self denominator];
-    int newNumerator = a / gcd( a , b ) ;
-    int newDenominator = b / gcd( a , b ) ;
-    
-    if (newDenominator<0)
-    {
-        newDenominator = newDenominator*-1;
-        newNumerator = newNumerator*-1;
-    }
-    
-    
-    WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
-                                               andDenominator:newDenominator];
-    
-        return theAnswer ;
-}
 
 
 -(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction

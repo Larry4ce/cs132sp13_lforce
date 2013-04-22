@@ -43,8 +43,6 @@
 
 -(WCSFraction*)divideInto:(WCSFraction*) theFraction ;
 
--(WCSFraction*)reduced;
-
 -(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction ;
 
 - (BOOL)isEqual:(id)other ;
