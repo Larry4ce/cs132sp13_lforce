@@ -66,7 +66,7 @@
                 {
                     [self clearOperation] ;
                     [self clearScreen] ;
-                    [self clearOperation] ;
+                    [self clearAccumulator] ;
                 }
                 else
                     if(isResultKey(theKey))
