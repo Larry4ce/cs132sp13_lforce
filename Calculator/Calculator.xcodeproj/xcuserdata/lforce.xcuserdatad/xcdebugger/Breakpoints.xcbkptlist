@@ -35,8 +35,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "175"
          endingLineNumber = "175"
-         landmarkName = "-testPressingLittlecClearsScreen"
-         landmarkType = "5">
+         landmarkName = "@implementation CalculatorTest"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
