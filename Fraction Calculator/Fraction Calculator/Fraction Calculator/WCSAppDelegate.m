@@ -2,7 +2,7 @@
 //  WCSAppDelegate.m
 //  Fraction Calculator
 //
-//  Created by Larry Force on 4/24/13.
+//  Created by Larry Force on 5/2/13.
 //  Copyright (c) 2013 Larry Force. All rights reserved.
 //
 
