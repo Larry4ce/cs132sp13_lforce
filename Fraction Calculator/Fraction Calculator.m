@@ -45,7 +45,7 @@
 
 -(NSString*) description
 {
-    return [NSString stringWithFormat:@"Calculator with %d on screen.", [self numberOnScreen ]];
+    return [NSString stringWithFormat:@"Calculator with %@ on screen.", [self numberOnScreen ]];
 }
 
 
@@ -75,7 +75,7 @@
                 {
                     [self clearOperation] ;
                     [self clearScreen] ;
-                    [self clearOperation] ;
+                    [self clearAccumulator] ;
                 }
                 else
                     if(isResultKey(theKey))
@@ -96,15 +96,15 @@
 
 -(void) appendDigit: (char) theDigit
 {
-    int old =[self numberOnScreen] ;
-    [ self setNumberOnScreen : old*10+(theDigit-'0') ] ;
+    WCSMutableFraction old =[self numberOnScreen] ;
+    //unknown
 }
 
 
 -(void) registerArithmetic:(char)theOperator
 {
     [self computeAndDisplayResult] ;
-    [self setNumberAccumulated : [self numberOnScreen]] ;
+    [self setNumberAccumulated : [[WCSFraction alloc]initWithFraction:[self numberOnScreen]]] ;
     [self clearScreen] ;
     [self setOperatingPending:theOperator] ;
 }
@@ -114,31 +114,30 @@
 -(void) computeAndDisplayResult
 {
     
-    int LHS = [self numberAccumulated] ;
-    int RHS = [self numberOnScreen] ;
+
     char operation = [self operatingPending] ;
-    int result = RHS ;
-    
+    WCSMutableFraction* result = [self numberOnScreen] ;
+    WCSFraction* accumulated = [self numberAccumulated];
     switch (operation)
     {
         case '+':
-            result = LHS + RHS;
+        [result modifyByAdding: accumulated ];
             break;
             
         case '-':
-            result = LHS - RHS;
+        [result modifyByAdding: [accumulated negative] ];
             break;
             
         case '*':
-            result = LHS * RHS;
+        [result modifyByMultiplying: accumulated ];
             break;
             
         case '/':
-            result = LHS / RHS;
+        [result modifyByMultiplying: [accumulated reciprocal] ];
             break;
             
         case '%':
-            result = LHS % RHS;
+            //can't recall
             break;
             
             
