@@ -22,6 +22,8 @@
 		3345C7C2173337000048C8B1 /* Fraction Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3345C7C1173337000048C8B1 /* Fraction Calculator.m */; };
 		3345C7C4173456A30048C8B1 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3345C7C3173456A30048C8B1 /* OCHamcrest.framework */; };
 		3345C7C6173457390048C8B1 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3345C7C5173457390048C8B1 /* OCMockito.framework */; };
+		3345C7C7173465AF0048C8B1 /* OCMockito.framework in Resources */ = {isa = PBXBuildFile; fileRef = 3345C7C5173457390048C8B1 /* OCMockito.framework */; };
+		3345C7C8173465AF0048C8B1 /* OCHamcrest.framework in Resources */ = {isa = PBXBuildFile; fileRef = 3345C7C3173456A30048C8B1 /* OCHamcrest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3345C7AB173335F80048C8B1 /* InfoPlist.strings in Resources */,
+				3345C7C7173465AF0048C8B1 /* OCMockito.framework in Resources */,
+				3345C7C8173465AF0048C8B1 /* OCHamcrest.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

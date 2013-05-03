@@ -290,6 +290,9 @@ BOOL isArithmeticAllKey(char someChar)
             return YES;
             break;
             
+        case '<':
+            return YES;
+            
         default:
             return NO ;
     }
