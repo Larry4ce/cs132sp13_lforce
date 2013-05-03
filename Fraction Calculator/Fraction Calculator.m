@@ -7,6 +7,8 @@
 //
 
 #import "Fraction Calculator.h"
+#import "WCSMutableFraction.h"
+#import "WCSFraction.h"
 
 @implementation Fraction_Calculator
 
@@ -28,12 +30,12 @@
 
 -(void)clearScreen
 {
-    [self setNumberOnScreen:0] ;
+    [self setNumberOnScreen:[[WCSMutableFraction alloc] initWithInteger: 0]] ;
 }
 
 -(void)clearAccumulator
 {
-    [self setNumberAccumulated:0] ;
+    [self setNumberAccumulated:[[WCSFraction alloc] initWithInteger: 0]] ;
 }
 
 -(void)clearOperation

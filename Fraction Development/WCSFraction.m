@@ -12,6 +12,8 @@
 @synthesize numerator = _initializedNumerator;
 @synthesize denominator = _initializedDenominator;
 
+
+
 -(id)copyWithZone:(NSZone *)zone
 {
     WCSFraction* somefraction;

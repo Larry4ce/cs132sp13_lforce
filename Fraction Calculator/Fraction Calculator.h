@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WCSFraction.h"
+#import "WCSMutableFraction.h"
 
 @interface Fraction_Calculator : NSObject
 
-@property (assign) int numberOnScreen;
+@property (assign) WCSMutableFraction numberOnScreen;
 
-@property (assign) int numberAccumulated;
+@property (assign) WCSFraction numberAccumulated;
 
 @property (assign) char operatingPending;
-
 
 
 -(void) pressKey: (char) theKey ;
