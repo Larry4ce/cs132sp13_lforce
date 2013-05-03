@@ -110,6 +110,7 @@
             
             
         default:
+            NSLog(@"ERROR!");
             break;
     }
 }

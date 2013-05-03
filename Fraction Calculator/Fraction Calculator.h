@@ -55,5 +55,3 @@ BOOL isResultKey(char someChar) ;
 BOOL isArithmeticAllKey(char someChar) ;
 
 
-
-@end
