@@ -23,7 +23,7 @@
         [self clearScreen];
         [self clearAccumulator];
         [self clearOperation];
-        
+        [self setTopOrBottom:WCSEP_Top];
     }
     return self;
 }
@@ -152,24 +152,45 @@
             break;
             
         case '%':
-            switch ([self topOrBottom]) {
-                case WCSEP_Top:
+        {
+                if([self topOrBottom]== WCSEP_Top)
+                {
                     [self setTopOrBottom: WCSEP_Bottom];
-                    break;
-                    
-                case WCSEP_Bottom:
+                }
+                else
+                if([self topOrBottom]== WCSEP_Bottom)
+                {
                     [self setTopOrBottom: WCSEP_Top];
-                    break;
-                    
-                default:
+                }
+                else
+                {
                     NSLog(@"ERROR!");
-                    break;
-            }
+                }
+        }
             break;
             
+            case '<':
+        {
+            result = [self numberOnScreen];
+            
+            if([self topOrBottom]== WCSEP_Top)
+            {
+                    [result setNumerator:[result numerator]/10];
+            }
+              else
+                  if([self topOrBottom]== WCSEP_Bottom)
+                  {
+                      [result setDenominator:[result denominator]/10];
+                  }
+                  else
+                    {
+                        NSLog(@"ERROR!");
+                    }
+            
+        }
             
         default:
-            break;
+        break;
             
     }
     
@@ -274,5 +295,14 @@ BOOL isArithmeticAllKey(char someChar)
     }
 }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
