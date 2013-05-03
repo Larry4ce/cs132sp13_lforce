@@ -20,6 +20,8 @@
 		3345C7BB1733366C0048C8B1 /* WCSFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3345C7B81733366C0048C8B1 /* WCSFraction.m */; };
 		3345C7BC1733366C0048C8B1 /* WCSMutableFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3345C7BA1733366C0048C8B1 /* WCSMutableFraction.m */; };
 		3345C7C2173337000048C8B1 /* Fraction Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3345C7C1173337000048C8B1 /* Fraction Calculator.m */; };
+		3345C7C4173456A30048C8B1 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3345C7C3173456A30048C8B1 /* OCHamcrest.framework */; };
+		3345C7C6173457390048C8B1 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3345C7C5173457390048C8B1 /* OCMockito.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		3345C7BA1733366C0048C8B1 /* WCSMutableFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCSMutableFraction.m; path = "Fraction Calculator/WCSMutableFraction.m"; sourceTree = "<group>"; };
 		3345C7C0173337000048C8B1 /* Fraction Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fraction Calculator.h"; sourceTree = "<group>"; };
 		3345C7C1173337000048C8B1 /* Fraction Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fraction Calculator.m"; sourceTree = "<group>"; };
+		3345C7C3173456A30048C8B1 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrest.framework; sourceTree = "<group>"; };
+		3345C7C5173457390048C8B1 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMockito.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 			files = (
 				3345C7A2173335F80048C8B1 /* SenTestingKit.framework in Frameworks */,
 				3345C7A3173335F80048C8B1 /* Cocoa.framework in Frameworks */,
+				3345C7C4173456A30048C8B1 /* OCHamcrest.framework in Frameworks */,
+				3345C7C6173457390048C8B1 /* OCMockito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +115,8 @@
 		3345C782173335F70048C8B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3345C7C5173457390048C8B1 /* OCMockito.framework */,
+				3345C7C3173456A30048C8B1 /* OCHamcrest.framework */,
 				3345C783173335F70048C8B1 /* Cocoa.framework */,
 				3345C7A1173335F80048C8B1 /* SenTestingKit.framework */,
 				3345C785173335F70048C8B1 /* Other Frameworks */,
@@ -427,7 +435,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fraction Calculator.app/Contents/MacOS/Fraction Calculator";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fraction Calculator/Fraction Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Fraction CalculatorTests/Fraction CalculatorTests-Info.plist";
@@ -442,7 +453,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fraction Calculator.app/Contents/MacOS/Fraction Calculator";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fraction Calculator/Fraction Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Fraction CalculatorTests/Fraction CalculatorTests-Info.plist";
@@ -471,6 +485,7 @@
 				3345C7B3173335F80048C8B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3345C7B4173335F80048C8B1 /* Build configuration list for PBXNativeTarget "Fraction CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +494,7 @@
 				3345C7B6173335F80048C8B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
