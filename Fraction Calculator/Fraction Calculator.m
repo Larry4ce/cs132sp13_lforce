@@ -96,8 +96,22 @@
 
 -(void) appendDigit: (char) theDigit
 {
-    WCSMutableFraction old =[self numberOnScreen] ;
-    //unknown
+    WCSMutableFraction* old =[self numberOnScreen] ;
+    switch ([self topOrBottom])
+    {
+        case WCSEP_Top:
+            [old setNumerator:[old numerator]*10+theDigit];
+            break;
+            
+        case WCSEP_Bottom:
+            [old setNumerator:[old denominator]*10+theDigit];
+            break;
+            
+            
+            
+        default:
+            break;
+    }
 }
 
 
@@ -114,30 +128,42 @@
 -(void) computeAndDisplayResult
 {
     
-
+    
     char operation = [self operatingPending] ;
     WCSMutableFraction* result = [self numberOnScreen] ;
     WCSFraction* accumulated = [self numberAccumulated];
     switch (operation)
     {
         case '+':
-        [result modifyByAdding: accumulated ];
+            [result modifyByAdding: accumulated ];
             break;
             
         case '-':
-        [result modifyByAdding: [accumulated negative] ];
+            [result modifyByAdding: [accumulated negative] ];
             break;
             
         case '*':
-        [result modifyByMultiplying: accumulated ];
+            [result modifyByMultiplying: accumulated ];
             break;
             
         case '/':
-        [result modifyByMultiplying: [accumulated reciprocal] ];
+            [result modifyByMultiplying: [accumulated reciprocal] ];
             break;
             
         case '%':
-            //can't recall
+            switch ([self topOrBottom]) {
+                case WCSEP_Top:
+                    [self setTopOrBottom: WCSEP_Bottom];
+                    break;
+                    
+                case WCSEP_Bottom:
+                    [self setTopOrBottom: WCSEP_Top];
+                    break;
+                    
+                default:
+                    NSLog(@"ERROR!");
+                    break;
+            }
             break;
             
             
@@ -249,4 +275,3 @@ BOOL isArithmeticAllKey(char someChar)
 
 
 
-@end
