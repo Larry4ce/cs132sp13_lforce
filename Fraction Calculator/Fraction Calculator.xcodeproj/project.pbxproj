@@ -16,7 +16,6 @@
 		3345C7A2173335F80048C8B1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3345C7A1173335F80048C8B1 /* SenTestingKit.framework */; };
 		3345C7A3173335F80048C8B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3345C783173335F70048C8B1 /* Cocoa.framework */; };
 		3345C7AB173335F80048C8B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3345C7A9173335F80048C8B1 /* InfoPlist.strings */; };
-		3345C7AE173335F80048C8B1 /* Fraction_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3345C7AD173335F80048C8B1 /* Fraction_CalculatorTests.m */; };
 		3345C7BB1733366C0048C8B1 /* WCSFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3345C7B81733366C0048C8B1 /* WCSFraction.m */; };
 		3345C7BC1733366C0048C8B1 /* WCSMutableFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3345C7BA1733366C0048C8B1 /* WCSMutableFraction.m */; };
 		3345C7C2173337000048C8B1 /* Fraction Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3345C7C1173337000048C8B1 /* Fraction Calculator.m */; };
@@ -24,6 +23,7 @@
 		3345C7C6173457390048C8B1 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3345C7C5173457390048C8B1 /* OCMockito.framework */; };
 		3345C7C7173465AF0048C8B1 /* OCMockito.framework in Resources */ = {isa = PBXBuildFile; fileRef = 3345C7C5173457390048C8B1 /* OCMockito.framework */; };
 		3345C7C8173465AF0048C8B1 /* OCHamcrest.framework in Resources */ = {isa = PBXBuildFile; fileRef = 3345C7C3173456A30048C8B1 /* OCHamcrest.framework */; };
+		335C08A717346A36006B96D7 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 335C08A617346A36006B96D7 /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,6 @@
 		3345C7A1173335F80048C8B1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3345C7A8173335F80048C8B1 /* Fraction CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fraction CalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		3345C7AA173335F80048C8B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3345C7AC173335F80048C8B1 /* Fraction_CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction_CalculatorTests.h; sourceTree = "<group>"; };
-		3345C7AD173335F80048C8B1 /* Fraction_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fraction_CalculatorTests.m; sourceTree = "<group>"; };
 		3345C7B71733366B0048C8B1 /* WCSFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCSFraction.h; path = "Fraction Calculator/WCSFraction.h"; sourceTree = "<group>"; };
 		3345C7B81733366C0048C8B1 /* WCSFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCSFraction.m; path = "Fraction Calculator/WCSFraction.m"; sourceTree = "<group>"; };
 		3345C7B91733366C0048C8B1 /* WCSMutableFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCSMutableFraction.h; path = "Fraction Calculator/WCSMutableFraction.h"; sourceTree = "<group>"; };
@@ -64,6 +62,7 @@
 		3345C7C1173337000048C8B1 /* Fraction Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fraction Calculator.m"; sourceTree = "<group>"; };
 		3345C7C3173456A30048C8B1 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrest.framework; sourceTree = "<group>"; };
 		3345C7C5173457390048C8B1 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMockito.framework; sourceTree = "<group>"; };
+		335C08A617346A36006B96D7 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +161,7 @@
 		3345C7A6173335F80048C8B1 /* Fraction CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				3345C7AC173335F80048C8B1 /* Fraction_CalculatorTests.h */,
-				3345C7AD173335F80048C8B1 /* Fraction_CalculatorTests.m */,
+				335C08A617346A36006B96D7 /* Test.m */,
 				3345C7A7173335F80048C8B1 /* Supporting Files */,
 			);
 			path = "Fraction CalculatorTests";
@@ -301,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3345C7AE173335F80048C8B1 /* Fraction_CalculatorTests.m in Sources */,
+				335C08A717346A36006B96D7 /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

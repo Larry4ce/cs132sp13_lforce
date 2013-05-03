@@ -6,7 +6,9 @@
 //
 
     // Class under test
-#import "<#Class Header#>"
+#import "Fraction Calculator.h"
+#import "WCSFraction.h"
+#import "WCSMutableFraction.h"
 
     // Collaborators
 
@@ -14,25 +16,44 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 // Uncomment the next two lines to use OCHamcrest for test assertions:
-//#define HC_SHORTHAND
-//#import <OCHamcrest/OCHamcrest.h>
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
 
 // Uncomment the next two lines to use OCMockito for mock objects:
-//#define MOCKITO_SHORTHAND
-//#import <OCMockito/OCMockito.h>
+#define MOCKITO_SHORTHAND
+#import <OCMockito/OCMockito.h>
 
 
 @interface Test : SenTestCase
 @end
 
 @implementation Test
+
 {
-    // test fixture ivars go here
+    Fraction_Calculator* sut;
+}
+
+- (void)setUp
+{
+    [super setUp];
+    sut = [[Fraction_Calculator alloc] init];
+    
+}
+
+- (void)tearDown
+{
+    sut= nil;
+    [super tearDown];
+}
+
+- (void)testCreateCalculator
+{
+    assertThat(sut, isNot(nil));
 }
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in Test");
+    STFail(@"Some line of code Stacey told me to do...");
 }
 
 @end
