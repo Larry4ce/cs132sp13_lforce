@@ -12,9 +12,9 @@
 
 @interface Fraction_Calculator : NSObject
 
-@property (assign) WCSMutableFraction numberOnScreen;
+@property (strong, readwrite) WCSMutableFraction* numberOnScreen;
 
-@property (assign) WCSFraction numberAccumulated;
+@property (strong, readwrite) WCSFraction* numberAccumulated;
 
 @property (assign) char operatingPending;
 
