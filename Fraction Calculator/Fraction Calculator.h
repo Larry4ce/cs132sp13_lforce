@@ -10,13 +10,22 @@
 #import "WCSFraction.h"
 #import "WCSMutableFraction.h"
 
+typedef enum
+{
+    WCSEP_Top,
+    WCSEP_Bottom
+} WCSEntryPoint ;
+
 @interface Fraction_Calculator : NSObject
 
 @property (strong, readwrite) WCSMutableFraction* numberOnScreen;
 
 @property (strong, readwrite) WCSFraction* numberAccumulated;
 
+@property (assign) WCSEntryPoint topOrBottom;
+
 @property (assign) char operatingPending;
+
 
 
 -(void) pressKey: (char) theKey ;

@@ -14,6 +14,7 @@
 
 @property(readonly, assign) int denominator;
 
+
 -(id) initWithNumerator:(int) theNumerator
           andDenominator:(int) theDenominator ;
 
