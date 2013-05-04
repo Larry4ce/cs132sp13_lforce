@@ -50,7 +50,7 @@
 
 -(void)pressKeys:(NSString*) keystring
 {
-    for(NSUInteger i=0; i<[keystring length]; i+=1)
+    for(NSUInteger i=0; i<[keystring length]; i=i+1)
     {
         [sut pressKey:[keystring characterAtIndex:i]];
     }
