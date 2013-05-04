@@ -197,45 +197,114 @@
 //Test BS with no value doesn't add value
 //Input: 1234<<
 //Testable result: NOS is 12
+- (void)testBSWithNoValue
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:12 andDenominator:1];
+    [self pressKeys:@"1234<<"];
+    assertThat([sut numberOnScreen], equalTo(temp));
+}
 
 //Test BS with no value doesn't add value
 //Input: 1<<
 //Testable result: NOS is zero
+- (void)testBSNoValue
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:0 andDenominator:1];
+    [self pressKeys:@"1<<"];
+    assertThat([sut numberOnScreen], equalTo(temp));
+}
+
 
 //Test effect of deleting entire denominator
 //Input: 5%<
 //Result: NOS is in error mode (1/0)
+- (void)testDeleteDenom
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:1 andDenominator:0];
+    [self pressKeys:@"5%<"];
+    assertThat([sut numberOnScreen], equalTo(temp));
+}
 
 //Test sequence of operations without digit input
 //Input: 15+-+
 //Testable result: Test Number ACCUMULATED is 15
 
+- (void)testSequenceOfOperations
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:15 andDenominator:1];
+    [self pressKeys:@"15+-+"];
+    assertThat([sut numberAccumulated], equalTo(temp));
+}
+
 
 //Check that auto-reduction works
 //Input: 122/4 (366/12)
 //Result: Check that NOS is 61/2
+- (void)testReduction
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:61 andDenominator:2];
+    [self pressKeys:@"366/12"];
+    assertThat([sut numberOnScreen], equalTo(temp));
+}
 
 //Test fraction-fraction addition
 //Input: 10/15+10/16 (2/3 + 5/8)
 //Testable result: Check that number on screen is equal to 31/24
+- (void)testAddition
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:31 andDenominator:24];
+    [self pressKeys:@"10/15+10/16"];
+    assertThat([sut numberOnScreen], equalTo(temp));
+}
 
 //Test fraction-fraction multiplication
 //Input: 5/1 * 2/10
 //Testable result: Check that NOS is 1
+- (void)testMultiply
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:1 andDenominator:1];
+    [self pressKeys:@"5/1*2/10"];
+    assertThat([sut numberOnScreen], equalTo(temp));
+}
+
 
 //Test fraction-fraction division
 //similar to above
+- (void)testFracDivision
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:1 andDenominator:1];
+    [self pressKeys:@"5/2/5/2"];
+    assertThat([sut numberOnScreen], equalTo(temp));
+}
 
 //Test fraction-fraction subtraction
 //similar to above
+- (void)testSubtraction
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:0 andDenominator:1];
+    [self pressKeys:@"1/3-1/3"];
+    assertThat([sut numberOnScreen], equalTo(temp));
+}
 
 //REtest integer-integer division
 //Input: 6/4
 //Result: the fraction 3/2
+- (void)testDivision
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:5 andDenominator:2];
+    [self pressKeys:@"5/2"];
+    assertThat([sut numberOnScreen], equalTo(temp));
+}
 
 //REtest integer-integer "modulo"
 //Input: 6%4
 //Result: the fraction 3/7
+- (void)testPercentage
+{
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:3 andDenominator:7];
+    [self pressKeys:@"6%4"];
+    assertThat([sut numberOnScreen], equalTo(temp));
+}
 
 
 @end
