@@ -21,9 +21,9 @@
 		3345C7C2173337000048C8B1 /* Fraction Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3345C7C1173337000048C8B1 /* Fraction Calculator.m */; };
 		3345C7C4173456A30048C8B1 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3345C7C3173456A30048C8B1 /* OCHamcrest.framework */; };
 		3345C7C6173457390048C8B1 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3345C7C5173457390048C8B1 /* OCMockito.framework */; };
-		3345C7C7173465AF0048C8B1 /* OCMockito.framework in Resources */ = {isa = PBXBuildFile; fileRef = 3345C7C5173457390048C8B1 /* OCMockito.framework */; };
-		3345C7C8173465AF0048C8B1 /* OCHamcrest.framework in Resources */ = {isa = PBXBuildFile; fileRef = 3345C7C3173456A30048C8B1 /* OCHamcrest.framework */; };
 		335C08A717346A36006B96D7 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 335C08A617346A36006B96D7 /* Test.m */; };
+		335C08AB17349E56006B96D7 /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3345C7C5173457390048C8B1 /* OCMockito.framework */; };
+		335C08AC17349E56006B96D7 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3345C7C3173456A30048C8B1 /* OCHamcrest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,20 @@
 			remoteInfo = "Fraction Calculator";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		335C08AA17349DBB006B96D7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				335C08AB17349E56006B96D7 /* OCMockito.framework in CopyFiles */,
+				335C08AC17349E56006B96D7 /* OCHamcrest.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3345C780173335F70048C8B1 /* Fraction Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fraction Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +217,7 @@
 				3345C79B173335F80048C8B1 /* Sources */,
 				3345C79C173335F80048C8B1 /* Frameworks */,
 				3345C79D173335F80048C8B1 /* Resources */,
+				335C08AA17349DBB006B96D7 /* CopyFiles */,
 				3345C79E173335F80048C8B1 /* ShellScript */,
 			);
 			buildRules = (
@@ -259,8 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3345C7AB173335F80048C8B1 /* InfoPlist.strings in Resources */,
-				3345C7C7173465AF0048C8B1 /* OCMockito.framework in Resources */,
-				3345C7C8173465AF0048C8B1 /* OCHamcrest.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
