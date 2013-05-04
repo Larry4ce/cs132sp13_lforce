@@ -131,7 +131,9 @@
     
     
     char operation = [self operatingPending] ;
+    
     WCSMutableFraction* result = [self numberOnScreen] ;
+    
     WCSFraction* accumulated = [self numberAccumulated];
     switch (operation)
     {
