@@ -40,11 +40,7 @@
     
 }
 
-- (void)tearDown
-{
-    sut= nil;
-    [super tearDown];
-}
+
 
 - (void)testCreateCalculator
 {
@@ -64,7 +60,7 @@
 // (see and update existing test)
 - (void)testThatClearWorks
 {
-    WCSFraction* temp = [[WCSMutableFraction alloc] initWithNumerator:0 andDenominator:1];
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:0 andDenominator:1];
     [self pressKeys:@"1c"];
     assertThat([sut numberOnScreen], is(equalTo(temp)));
 }
@@ -73,7 +69,7 @@
 // (see and update existing test)
 - (void)testThatAllClearWorks
 {
-    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:0 andDenominator:1];
+    WCSMutableFraction* temp = [[WCSMutableFraction alloc] initWithNumerator:0 andDenominator:1];
     [self pressKeys:@"1A"];
     assertThat([sut numberAccumulated], is(equalTo(temp)));
 }
@@ -109,8 +105,8 @@
 //Testable result: NOS is 0
 - (void)testPercentWorks
 {
-    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:0 andDenominator:5];
     [self pressKeys:@"%5"];
+    WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:0 andDenominator:5];
     assertThat([sut numberOnScreen], is(equalTo(temp)));
 }
 
@@ -183,7 +179,7 @@
 //Test pushing BS deletes in denominator mode
 //Input: 3%104<
 //Testable result: NOS is in error state (aka 1/36)
-- (void)testBSDeletesDenom
+- (void)testBSDeletesDenoms
 {
     WCSFraction* temp = [[WCSFraction alloc] initWithNumerator:1 andDenominator:36];
     [self pressKeys:@"3%104<"];
@@ -303,5 +299,10 @@
     assertThat([sut numberOnScreen], is(equalTo(temp)));
 }
 
+- (void)tearDown
+{
+    sut= nil;
+    [super tearDown];
+}
 
 @end

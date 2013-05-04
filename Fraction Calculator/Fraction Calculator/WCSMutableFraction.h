@@ -11,8 +11,7 @@
 
 @interface WCSMutableFraction : WCSFraction <NSMutableCopying>
 
-@
-property(readwrite, assign) int numerator;
+@property(readwrite, assign) int numerator;
 
 @property(readwrite, assign) int denominator;
 

@@ -12,6 +12,14 @@
 
 @implementation Fraction_Calculator
 
+@synthesize numberAccumulated;
+
+@synthesize numberOnScreen;
+
+@synthesize operatingPending;
+
+@synthesize topOrBottom;
+
 
 
 - (id)init
@@ -33,9 +41,10 @@
     [self setNumberOnScreen:[[WCSMutableFraction alloc] initWithInteger: 0]] ;
 }
 
--(void)clearAccumulator
+-(void) clearAccumulator
 {
-    [self setNumberAccumulated:[[WCSFraction alloc] initWithInteger: 0]] ;
+    WCSFraction* clear = [[WCSFraction alloc] initWithNumerator:0 andDenominator:1];
+    numberAccumulated = clear;
 }
 
 -(void)clearOperation
@@ -104,7 +113,7 @@
             break;
             
         case WCSEP_Bottom:
-            [old setNumerator:[old denominator]*10+theDigit];
+            [old setDenominator:[old denominator]*10+theDigit];
             break;
             
             
@@ -118,12 +127,12 @@
 
 -(void) registerArithmetic:(char)theOperator
 {
-    [self computeAndDisplayResult] ;
-    [self setNumberAccumulated : [[WCSFraction alloc]initWithFraction:[self numberOnScreen]]] ;
-    [self clearScreen] ;
-    [self setOperatingPending:theOperator] ;
+    [self computeAndDisplayResult];
+    [self setNumberAccumulated:[self numberOnScreen]];
+    [self clearScreen];
+    [self setOperatingPending :theOperator];
+    
 }
-
 
 
 -(void) computeAndDisplayResult
